@@ -3,7 +3,6 @@ import { useUser } from '../../context/UserContext';
 
 export default function PrivateRoute({ children, ...rest }) {
   const { user } = useUser();
-  console.log(user, 'USER');
 
   return (
     <Route
@@ -12,7 +11,7 @@ export default function PrivateRoute({ children, ...rest }) {
         user.id ? (
           children
         ) : (
-          <Redirect to={{ pathname: 'login', state: { from: location } }} />
+          <Redirect to={{ pathname: '/login', state: { from: location } }} />
         )
       }
     />
