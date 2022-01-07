@@ -7,7 +7,8 @@ export default function Home() {
     <section>
       <h1>Welcome to the Acme Directory</h1>
       <p>
-        Please <Link to="login">login</Link> to use the directory
+        Please<Link to="/register">sign up</Link> or{' '}
+        <Link to="login">login</Link> to use the directory
       </p>
     </section>
   );
